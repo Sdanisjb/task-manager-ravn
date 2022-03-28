@@ -17,6 +17,10 @@ describe("Master Sidebar Mount", () => {
   it("must show a 'My Tasks' tag", () => {
     expect(screen.getByText("my tasks")).toBeInTheDocument();
   });
+
+  it("must show an img with RAVN logo", () => {
+    expect(screen.getByAltText("ravn-logo")).toBeInTheDocument();
+  });
 });
 
 describe("check good practices", () => {
