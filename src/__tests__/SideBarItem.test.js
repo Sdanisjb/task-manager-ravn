@@ -17,6 +17,6 @@ describe("Side Bar Item Mount", () => {
   });
 
   it("all elements must be in a wrapped component", () => {
-    expect(screen.getByLabelText("sidebar-container")).toBeInTheDocument();
+    expect(screen.getByLabelText("sidebaritem-container")).toBeInTheDocument();
   });
 });
