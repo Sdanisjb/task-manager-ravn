@@ -1,11 +1,15 @@
-import React from "react";
-import { RiFunctionLine, RiMenuFill } from "react-icons/ri";
+import React, { useState } from "react";
+import "./SideBarItem.css";
 
 const SideBarItem = ({ icon, labelText }) => {
+  const [selected, setSelected] = useState(false);
   return (
-    <div aria-label="sidebar-container">
-      {icon === "dashboard" && <RiFunctionLine aria-label="sidebar-icon" />}
-      {icon === "tasks" && <RiMenuFill aria-label="sidebar-icon" />}
+    <div
+      aria-label="sidebaritem-container"
+      className={`sidebaritem-container ${selected ? "selected" : ""}`}
+      onClick={() => setSelected(!selected)}
+    >
+      <span aria-label="sidebar-icon">{icon}</span>
 
       <label aria-label="sidebar-label">{labelText}</label>
     </div>
