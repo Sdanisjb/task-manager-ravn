@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "./SideBarItem.css";
+import "./fonts.css";
 
 const SideBarItem = ({ icon, labelText }) => {
   const [selected, setSelected] = useState(false);
@@ -11,7 +12,9 @@ const SideBarItem = ({ icon, labelText }) => {
     >
       <span aria-label="sidebar-icon">{icon}</span>
 
-      <label aria-label="sidebar-label">{labelText}</label>
+      <label aria-label="sidebar-label" className="body-m bold">
+        {labelText}
+      </label>
     </div>
   );
 };
