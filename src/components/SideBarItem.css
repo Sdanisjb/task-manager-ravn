@@ -1,0 +1,29 @@
+@import "./colors.css";
+
+.sidebaritem-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: left;
+  gap: 15px;
+  width: 232px;
+  height: 56px;
+  color: var(--color-neutral-2);
+  padding: 0px 0px 0px 16px;
+  text-transform: uppercase;
+}
+
+.sidebaritem-container:hover {
+  color: var(--color-primary-4);
+}
+
+.selected {
+  color: var(--color-primary-4);
+  background: linear-gradient(
+    90deg,
+    rgba(186, 37, 37, 0) 0%,
+    rgba(210, 77, 77, 0.1) 100%
+  );
+  border-right: 4px solid;
+  border-right-color: var(--color-primary-4);
+}
