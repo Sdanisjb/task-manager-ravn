@@ -9,18 +9,14 @@ beforeEach(() =>
 
 describe("Side Bar Item Mount", () => {
   it("must show an icon", () => {
-    expect(
-      screen.getByRole("icon", { name: "sidebar-icon" })
-    ).toBeInTheDocument();
+    expect(screen.getByLabelText("sidebar-icon")).toBeInTheDocument();
   });
 
   it("must show a label", () => {
-    expect(
-      screen.getByRole("label", { name: "sidebar-label" })
-    ).toBeInTheDocument();
+    expect(screen.getByLabelText("sidebar-label")).toBeInTheDocument();
   });
 
   it("all elements must be in a wrapped component", () => {
-    expect(screen.getByRole("sidebar-container")).toBeInTheDocument();
+    expect(screen.getByLabelText("sidebar-container")).toBeInTheDocument();
   });
 });
