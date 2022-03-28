@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import "./SideBarItem.css";
 import "./fonts.css";
 
-const SideBarItem = ({ icon, labelText }) => {
-  const [selected, setSelected] = useState(false);
+const SideBarItem = ({ icon, labelText, selected, setSelected }) => {
   return (
     <div
       aria-label="sidebaritem-container"
-      className={`sidebaritem-container ${selected ? "selected" : ""}`}
-      onClick={() => setSelected(!selected)}
+      className={`sidebaritem-container ${
+        selected === labelText ? "selected" : ""
+      }`}
+      onClick={() => setSelected(labelText)}
     >
       <span aria-label="sidebar-icon">{icon}</span>
 
