@@ -1,10 +1,12 @@
 import React from "react";
-import SideBarItem from "./components/SideBarItem";
+import MasterNavbar from "./components/MasterNavbar";
+
+import "./components/fonts.css";
 
 function App() {
   return (
     <div>
-      <SideBarItem icon="dashboard" labelText="dashboard" />
+      <MasterNavbar />
     </div>
   );
 }
