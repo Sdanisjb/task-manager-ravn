@@ -26,7 +26,7 @@ describe("Master Navbar Mount", () => {
 
 describe("Delete button appeareance and functionality", () => {
   it("on input, must appear delete icon button", () => {
-    const clearButton = screen.getByRole("button", { name: "clear button" });
+    const clearButton = screen.getByLabelText(/clear button/i);
     expect(clearButton).toBeNull();
 
     fireEvent.change(screen.getByPlaceholderText(/Search/i), {
